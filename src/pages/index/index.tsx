@@ -1,5 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import { View, Text, Button } from '@tarojs/components'
+import Child from "../../components/child";
 import './index.scss'
 
 export default class Index extends Component {
@@ -25,10 +26,21 @@ export default class Index extends Component {
     navigationBarTitleText: '首页'
   }
 
+  state = {
+    name: "hello 前端骚年"
+  }
+
+  goNext() {
+    Taro.navigateTo({url:'/pages/next/next?nextTheme=这是上个页面的参数'})
+  }
+
   render () {
+    const { name } = this.state
     return (
       <View className='index'>
-        <Text>Hello world!</Text>
+        <Text>{name}</Text>
+        <Child childName ="对象{child}"/>
+        <Button onClick={this.goNext}>我吃好了</Button>
       </View>
     )
   }
