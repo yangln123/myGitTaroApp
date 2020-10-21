@@ -31,7 +31,7 @@ export default class Index extends Component {
   }
 
   goNext() {
-    Taro.navigateTo({url:'/pages/next/next?nextTheme=这是上个页面的参数'})
+    Taro.navigateTo({url:'/pages/next/next?nextTheme=入参'})
   }
 
   render () {

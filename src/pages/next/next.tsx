@@ -1,5 +1,5 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import { View, Text, Button } from '@tarojs/components'
 import './next.scss'
 
 export default class Next extends Component {
@@ -28,11 +28,16 @@ export default class Next extends Component {
     navigationBarTitleText: 'next页面标题'
   }
 
+  goNext() {
+    Taro.navigateTo({url:'/pages/next/nextTabbar'})
+  }
+
   render () {
     const { nextTheme } = this.state
     return (
       <View className='next'>
         <Text>获得上个页面的参数为：{nextTheme}</Text>
+        <Button onClick={this.goNext}>tabBar页面</Button>
       </View>
     )
   }

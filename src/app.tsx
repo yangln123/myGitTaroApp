@@ -29,7 +29,8 @@ class App extends Component {
   config: Config = {
     pages: [
       'pages/index/index',
-      'pages/next/next'
+      'pages/next/next',
+      'pages/next/nextTabbar'
     ],
     window: {
       backgroundTextStyle: 'light',
