@@ -29,7 +29,8 @@ export default class Next extends Component {
   }
 
   goNext() {
-    Taro.navigateTo({url:'/pages/next/nextTabbar'})
+    // Taro.navigateTo({url:'/pages/next/nextTabbar'})//打开新页面
+    Taro.redirectTo({url:'/pages/next/nextTabbar'})//当前页面打开
   }
 
   render () {

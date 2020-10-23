@@ -30,13 +30,38 @@ class App extends Component {
     pages: [
       'pages/index/index',
       'pages/next/next',
-      'pages/next/nextTabbar'
+      'pages/next/nextTabbar',
+      'pages/list/list',
+      'pages/list/listDetail',
+      'pages/list/listItem'
     ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
       navigationBarTitleText: 'WeChat',
       navigationBarTextStyle: 'black'
+    },
+    tabBar: {
+      list: [{
+        pagePath: "pages/index/index",
+        text: "首页",
+        iconPath: "./assets/tab_bar/home.png",
+        selectedIconPath: "./assets/tab_bar/home-active.png"
+      }, {
+        pagePath: "pages/next/next",
+        text: "我的",
+        iconPath: "./assets/tab_bar/user.png",
+        selectedIconPath: "./assets/tab_bar/user-active.png"
+      }, {
+        pagePath: "pages/list/list",
+        text: "列表",
+        iconPath: "./assets/tab_bar/user.png",
+        selectedIconPath: "./assets/tab_bar/user-active.png"
+      }],
+      color: '#333',
+      selectedColor: '#333',
+      backgroundColor: '#fff',
+      borderStyle: '#ccc'
     }
   }
 
